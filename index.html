@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validateform(){
+            var x = document.forms["myform"] ["fname"].value;
+            if (x == ""){
+                alert("NAME MUST BE FILLED OUT");
+                return false
+            }
+            if (x.length < 2){
+            alert("INPUT COMPLETE NAME");
+            return false
+            }
+              if (x.length > 10) {
+                alert(" NAME IS TOO LONG");
+                return false
+            }
+            else{
+                alert("SUCCESSFULL")
+            }
+        
+        }
+    </script>
+</head>
+<body>
+    <form name="myform" onsubmit="validateform()">
+        NAME :<input type="text" name="fname">
+        <input type="submit" value="submit">
+        <p id="message"></p>
+    </form>
+</body>
+</html>
